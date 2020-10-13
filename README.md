@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/kennethenglisch/cautious-potatos">
-    <img src="images/logo.jpg" alt="Logo" width="150" height="150">
+    <img src="images/logo.jpeg" alt="Logo" width="150" height="150">
   </a>
 
   <h3 align="center">Cautious Potatos (temporary name)</h3>
