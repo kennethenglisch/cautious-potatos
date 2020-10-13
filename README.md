@@ -63,8 +63,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 ### Basic Idea
-* Genre: Rogue-like
-* Story (temp): Death is invading the physical World, and our hero sets out to vanquish him. During his quest, he dies (multiple times) and slowly his goal changes, from saving the world to simply wanting to die (permantly). After Deaths defeat, the Hero himself takes it's place, and the game starts over again, with a new hero at the start.
+* Genre: 2D Rogue-like
+* Story (temp): Death is invading the physical world, and our hero sets out to vanquish him. During his quest, he dies (multiple times) and slowly his goal changes, from saving the world to simply wanting to die (permantly). After Deaths defeat, the hero himself takes it's place, and the game starts over again, with a new hero at the start.
 
 ### Built With
 
