@@ -95,8 +95,8 @@ See the [open issues](https://github.com/kennethenglisch/cautious-potatos/issues
 
 <!-- CONTRIBUTING -->
 ## Contributing
-Bartholomäus Berresheim
-Kenneth Englisch
+Bartholomäus Berresheim\n
+Kenneth Englisch\n
 Marie Lencer
 <!-- LICENSE -->
 ## License
