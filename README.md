@@ -65,7 +65,7 @@
 
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
 * [Unity](https://unity.com)
 Version: 2019.4
 
@@ -73,9 +73,6 @@ Version: 2019.4
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -90,8 +87,6 @@ To get a local copy up and running follow these simple example steps.
 
 See the [open issues](https://github.com/kennethenglisch/cautious-potatos/issues) for a list of proposed features (and known issues).
 
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -99,7 +94,6 @@ See the [open issues](https://github.com/kennethenglisch/cautious-potatos/issues
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
