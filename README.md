@@ -62,7 +62,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+### Basic Idea
+Rogue-like, 
 
 ### Built With
 
@@ -94,7 +95,7 @@ See the [open issues](https://github.com/kennethenglisch/cautious-potatos/issues
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
+Bartholomäus Berresheim, Kenneth Englisch, Marie Lencer
 <!-- LICENSE -->
 ## License
 
