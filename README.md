@@ -121,4 +121,4 @@ Project Link: [https://github.com/kennethenglisch/cautious-potatos](https://gith
 [issues-shield]: https://img.shields.io/github/issues/kennethenglisch/cautious-potatos?style=flat-square
 [issues-url]: https://github.com/kennethenglisch/cautious-potatos/issues
 [license-shield]: https://img.shields.io/github/license/kennethenglisch/cautious-potatos?style=flat-square
-[license-url]: https://github.com/kennethenglisch/cautious-potatos/blob/master/LICENSE.txt
+[license-url]: https://github.com/kennethenglisch/cautious-potatos/blob/master/LICENSE
