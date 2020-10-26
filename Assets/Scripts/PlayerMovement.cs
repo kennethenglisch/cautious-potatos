@@ -9,26 +9,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] public float speed = 2;
     //private Rigidbody2D rB2D;
     // Start is called before the first frame update
     void Start()
     {
-        speed = 1;
+        //speed = 1;
         //rB2D = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
-    /*void FixedUpdate()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        Vector2 movementRB = new Vector2(horizontalInput, verticalInput);
-        
-        
-        rB2D.AddForce(movementRB * speed);
-    }*/
 
     void Update(){
         float horizontalInput = Input.GetAxis("Horizontal");
