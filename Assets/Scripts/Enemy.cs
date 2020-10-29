@@ -19,7 +19,12 @@ public class Enemy : MonoBehaviour
 
     SpriteRenderer enemySR;
     Rigidbody2D rb;
-    
+
+    [SerializeField]
+    private PolygonCollider2D[] colliders = new PolygonCollider2D[8];
+    private int currentColliderIndex = 0;
+
+
     Animator enemyAnim;
 
     UnityEngine.Vector3 Player;
@@ -81,7 +86,7 @@ public class Enemy : MonoBehaviour
             else
             {
 
-
+                SetColliderForSprite(0);
                 rb.AddForce(Playerdirection.normalized * speed);
                 rb.velocity = rb.velocity.normalized * speed;
 
@@ -106,5 +111,11 @@ public class Enemy : MonoBehaviour
     public bool checkRadius(float radius)
     {
         return (Mathf.Sqrt(Mathf.Pow(Player.x - transform.position.x, 2) + Mathf.Pow(Player.y - transform.position.y, 2)) < radius);
+    }
+    public void SetColliderForSprite(int spriteNum)
+    {
+        colliders[currentColliderIndex].enabled = false;
+        currentColliderIndex = spriteNum;
+        colliders[currentColliderIndex].enabled = true;
     }
 }
