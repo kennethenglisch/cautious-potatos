@@ -109,12 +109,12 @@ public class PlayerController : MonoBehaviour
     {
         // play deathscreen
         animator.Play("hero-death");
-        Invoke("LoadDeathScreen", 2f);
+        Invoke("LoadDeathScreen", 1.5f);
         
     }
     private void LoadDeathScreen()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     void OnTriggerEnter2D(Collider2D col)
