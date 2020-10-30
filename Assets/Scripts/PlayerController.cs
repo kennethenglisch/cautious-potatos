@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /* Author: Marie Lencer
  * Date: 25.10.2020
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 2f;
     [SerializeField] Animator animator = null;
-    [Range(0, 100)][SerializeField] int healthpoints = 100;
+    [Range(0, 100)][SerializeField] int healthPoints = 100;
     [SerializeField] int attackPoints = 10;
 
     [SerializeField] private PolygonCollider2D[] runColliders;
@@ -101,14 +102,37 @@ public class PlayerController : MonoBehaviour
 
     private bool IsDead()
     {
-        return healthpoints <= 0;
+        return healthPoints <= 0;
     }
 
     private void ProcessDead()
     {
         // play deathscreen
         animator.Play("hero-death");
-        deadScenePlayed = true;
+        Invoke("LoadDeathScreen", 2f);
+        
+    }
+    private void LoadDeathScreen()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Enemy")
+        {
+            if (IsAttacking()) { 
+                col.gameObject.SendMessage("ApplyDamage", attackPoints);
+                print("fucke you");
+            }
+        }
+    }
+
+    
+
+    public void ApplyDamage(int damage)
+    {
+        healthPoints -= damage;
     }
 
     private bool IsIdle()
