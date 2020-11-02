@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,27 +12,46 @@ using UnityEngine.SceneManagement;
  * Modified by: Kenneth Englisch
  * Date: 26.10.2020
  * 
- * Version: 1.1
+ * Modified by: Kenneth Englisch
+ * Date: 02.11.2020
+ * 
+ * Version: 1.2
  */
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float speed = 2f;
-    [SerializeField] Animator animator = null;
+    [Header("General")]
+    [Tooltip("In ms^-1")][SerializeField] float speed = 2f;
+
+    [Header("Health and Attack")]
     [Range(0, 100)][SerializeField] int healthPoints = 100;
-    [SerializeField] int attackPoints = 10;
+    [Range(1, 50)][SerializeField] int attackPoints = 10;
+    [Tooltip("In Seconds")][Range(1.0f, 10f)][SerializeField] float fireRate = 1.5f; // The interval the player is able to fire
 
-    [SerializeField] private PolygonCollider2D[] runColliders;
+    [Header("Loading Resources")]
+    [SerializeField] Animator animator = null;
+    [SerializeField] SpriteRenderer spriteRenderer = null;
+    [SerializeField] GameObject rangedAttackPrefab = null;
 
+    [Header("Colliders for Animations")]
+    [SerializeField] PolygonCollider2D[] runColliders = null;
+    
     private int currentColliderIndex = 0;
 
     private float horizontalInput;
     private float verticalInput;
+
     private bool deadScenePlayed = false;
+    
+    private float nextFire = 0.0f;
 
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+
+        rangedAttackPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/hero-projectile-rounded.prefab", typeof(GameObject));
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -65,16 +85,17 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput > 0 && !IsAttacking())
         {
             // set player facing to the right
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            //transform.localRotation = Quaternion.Euler(0, 0, 0);
+            spriteRenderer.flipX = false;
             animator.Play("hero-run");
         }
         if (horizontalInput < 0 && !IsAttacking())
         {
             // set player facing to the left
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            //transform.localRotation = Quaternion.Euler(0, 180, 0);
             // inverting the input, otherwise the player would walk backwards
-            horizontalInput = -horizontalInput;
-
+            //horizontalInput = -horizontalInput;
+            spriteRenderer.flipX = true;
             animator.Play("hero-run");
         }
         if (verticalInput != 0 && !IsAttacking())
@@ -90,14 +111,34 @@ public class PlayerController : MonoBehaviour
     
     private void ProcessAttack()
     {
-        if(Input.GetButton("Fire1"))
-        {
-            animator.Play("hero-attack1");
-        }
-        else if(Input.GetButton("Fire2"))
-        {
-            animator.Play("hero-attack2");
-        }
+            if (Input.GetButton("Fire1") && Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
+                animator.Play("hero-attack1");
+            }
+            else if (Input.GetButton("Fire2") && Time.time > nextFire)
+            {
+                nextFire = Time.time + fireRate;
+                animator.Play("hero-attack2");
+
+                if (rangedAttackPrefab != null)
+                    ProcessRangedAttack();
+            }
+    }
+
+    private void ProcessRangedAttack()
+    {
+        float vertical = verticalInput;
+        float horizontal = horizontalInput;
+
+        float[] inputs = new float[2] { vertical, horizontal }; 
+
+        GameObject clone;
+
+        clone = Instantiate(rangedAttackPrefab, gameObject.transform.parent, false);
+
+
+        clone.SendMessage("GetInputs", inputs);
     }
 
     private bool IsDead()
@@ -112,12 +153,13 @@ public class PlayerController : MonoBehaviour
         Invoke("LoadDeathScreen", 1.5f);
         
     }
+
     private void LoadDeathScreen()
     {
         SceneManager.LoadScene(2);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Enemy")
         {
@@ -127,8 +169,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-    
 
     public void ApplyDamage(int damage)
     {

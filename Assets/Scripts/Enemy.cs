@@ -125,7 +125,7 @@ public class Enemy : MonoBehaviour
             
             if (isAttacking && currentColliderIndex == 4) { 
             col.gameObject.SendMessage("ApplyDamage", attackDamage);
-            //print("fuck me");
+            print("fuck me");
 
                 isAttacking = false;
                 TimerForNextAttack = Cooldown;

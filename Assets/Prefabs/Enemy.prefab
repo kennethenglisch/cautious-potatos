@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 1468845597786708822}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1421120738496205785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.075, y: -1.85, z: -0.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -506,8 +506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b403e14796355d47b03e464de8037a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDamage: 10
   lifePoints: 20
-  speed: 119.27
+  speed: 1
   colliders:
   - {fileID: 1468845597786708826}
   - {fileID: 3606261035826827379}
