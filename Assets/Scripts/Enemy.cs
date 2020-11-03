@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
 
         Playerdirection = new UnityEngine.Vector2(Xdif, Ydif);
 
-        if (lifePoints < 0)
+        if (lifePoints <= 0)
         {
             isAttacking = false;
             rb.velocity = UnityEngine.Vector3.zero;
@@ -124,8 +124,8 @@ public class Enemy : MonoBehaviour
         if (col.tag == "Player") {
             
             if (isAttacking && currentColliderIndex == 4) { 
-            col.gameObject.SendMessage("ApplyDamage", attackDamage);
-            print("fuck me");
+                col.gameObject.SendMessage("ApplyDamage", attackDamage);
+                print("fuck me");
 
                 isAttacking = false;
                 TimerForNextAttack = Cooldown;

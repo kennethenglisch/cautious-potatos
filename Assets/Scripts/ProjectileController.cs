@@ -125,6 +125,7 @@ public class ProjectileController : MonoBehaviour
         {
             col.gameObject.SendMessage("ApplyDamage", attackPoints);
             print("fuck him");
+            Destroy(gameObject);
         }
         
     }

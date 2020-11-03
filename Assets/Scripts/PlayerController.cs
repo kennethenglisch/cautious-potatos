@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessMovement()
     {
-        if (!IsAttacking())
+        if (!IsAttacking() && !GotHit())
         {
             horizontalInput = Input.GetAxis("Horizontal");
             verticalInput = Input.GetAxis("Vertical");
@@ -82,14 +82,14 @@ public class PlayerController : MonoBehaviour
             animator.Play("hero-idle");
         }
 
-        if (horizontalInput > 0 && !IsAttacking())
+        if (horizontalInput > 0 && !IsAttacking() && !GotHit())
         {
             // set player facing to the right
             //transform.localRotation = Quaternion.Euler(0, 0, 0);
             spriteRenderer.flipX = false;
             animator.Play("hero-run");
         }
-        if (horizontalInput < 0 && !IsAttacking())
+        if (horizontalInput < 0 && !IsAttacking() && !GotHit())
         {
             // set player facing to the left
             //transform.localRotation = Quaternion.Euler(0, 180, 0);
@@ -98,14 +98,14 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
             animator.Play("hero-run");
         }
-        if (verticalInput != 0 && !IsAttacking())
+        if (verticalInput != 0 && !IsAttacking() && !GotHit())
         {
             animator.Play("hero-run");
         }
 
          Vector3 movement = new Vector3(horizontalInput, verticalInput, 0.0f);
 
-         if(!IsAttacking())
+         if(!IsAttacking() && !GotHit())
             transform.Translate(movement * speed * Time.deltaTime);
     }
     
@@ -173,6 +173,12 @@ public class PlayerController : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         healthPoints -= damage;
+        animator.Play("hero-hit");
+    }
+
+    private bool GotHit()
+    {
+        return IsPlaying("hero-hit");
     }
 
     private bool IsIdle()
