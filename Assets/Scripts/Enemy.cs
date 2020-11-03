@@ -20,17 +20,11 @@ public class Enemy : MonoBehaviour
     SpriteRenderer enemySR;
     Rigidbody2D rb;
 
-    [SerializeField]
-    private PolygonCollider2D[] colliders = new PolygonCollider2D[8];
-    private int currentColliderIndex = 0;
-
     float TimerForNextAttack, Cooldown;
     Animator enemyAnim;
 
     UnityEngine.Vector3 Player;
     UnityEngine.Vector2 Playerdirection;
-
-    bool isAttacking = false;
 
     float Xdif;
     float Ydif;
@@ -59,7 +53,6 @@ public class Enemy : MonoBehaviour
 
         if (lifePoints <= 0)
         {
-            isAttacking = false;
             rb.velocity = UnityEngine.Vector3.zero;
             rb.angularVelocity = 0;
             enemyAnim.Play("Enemy1Death");
@@ -85,7 +78,6 @@ public class Enemy : MonoBehaviour
                     TimerForNextAttack -= Time.deltaTime;
                 }
                 else { 
-                isAttacking = true;
                 enemyAnim.Play("Enemy1AttackA");
                 }
                 rb.velocity = UnityEngine.Vector3.zero;
@@ -93,14 +85,10 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-
-                SetColliderForSprite(0);
                 rb.AddForce(Playerdirection.normalized * speed);
                 rb.velocity = rb.velocity.normalized * speed;
 
-
                 //for attack animation
-                isAttacking = false;
                 enemyAnim.Play("Enemy1Walk");
              //   print(Player.x + " --------------- " + transform.position.x);
 
@@ -109,7 +97,6 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            isAttacking = false;
             enemyAnim.Play("Enemy1Idle");
             rb.velocity = UnityEngine.Vector3.zero;
             rb.angularVelocity = 0;
@@ -122,12 +109,11 @@ public class Enemy : MonoBehaviour
     {
         
         if (col.tag == "Player") {
-            
-            if (isAttacking && currentColliderIndex == 4) { 
+            print(col);
+            if (IsAttacking()) { 
                 col.gameObject.SendMessage("ApplyDamage", attackDamage);
                 print("fuck me");
 
-                isAttacking = false;
                 TimerForNextAttack = Cooldown;
             }
         }
@@ -136,16 +122,25 @@ public class Enemy : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         lifePoints -= damage;
+        enemyAnim.Play("Enemy1Hit");
     }
 
     public bool checkRadius(float radius)
     {
         return (Mathf.Sqrt(Mathf.Pow(Player.x - transform.position.x, 2) + Mathf.Pow(Player.y - transform.position.y, 2)) < radius);
     }
-    public void SetColliderForSprite(int spriteNum)
+
+    private bool IsAttacking()
     {
-        colliders[currentColliderIndex].enabled = false;
-        currentColliderIndex = spriteNum;
-        colliders[currentColliderIndex].enabled = true;
+        return IsPlaying("Enemy1AttackA");
+    }
+
+    private bool IsPlaying(string stateName)
+    {
+        if (enemyAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName) &&
+            enemyAnim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            return true;
+        else
+            return false;
     }
 }

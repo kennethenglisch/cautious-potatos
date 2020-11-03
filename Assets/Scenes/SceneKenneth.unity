@@ -180,7 +180,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 1.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -321,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045380317400208708, guid: bdba93decdcd164419fe02daa2c3a383,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.36247545
       objectReference: {fileID: 0}
     - target: {fileID: 7439138472634663941, guid: bdba93decdcd164419fe02daa2c3a383,
         type: 3}

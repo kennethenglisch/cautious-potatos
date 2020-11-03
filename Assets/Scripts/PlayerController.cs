@@ -32,12 +32,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator = null;
     [SerializeField] SpriteRenderer spriteRenderer = null;
     [SerializeField] GameObject rangedAttackPrefab = null;
-
-    [Header("Colliders for Animations")]
-    [SerializeField] PolygonCollider2D[] runColliders = null;
     
-    private int currentColliderIndex = 0;
-
     private float horizontalInput;
     private float verticalInput;
 
@@ -206,12 +201,5 @@ public class PlayerController : MonoBehaviour
             return true;
         else
             return false;
-    }
-
-    public void SetRunColliderForSprite(int spriteNum)
-    {
-        runColliders[currentColliderIndex].enabled = false;
-        currentColliderIndex = spriteNum;
-        runColliders[currentColliderIndex].enabled = true;
     }
 }
