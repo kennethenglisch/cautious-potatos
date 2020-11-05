@@ -10,6 +10,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerHealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnemyHealthBar1.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnemyHealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerStats.cs" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1jm1IMlkOLkeqpdOGp1kbiPLB1S" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,6 +70,7 @@
       <updated>1604394390414</updated>
       <workItem from="1604394406507" duration="599000" />
       <workItem from="1604426943255" duration="2004000" />
+      <workItem from="1604594898106" duration="10523000" />
     </task>
     <servers />
   </component>
@@ -62,5 +81,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604607043141">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040/1920.0.1920.1040@-1920.0.1920.1040" timestamp="1604607043141" />
   </component>
 </project>

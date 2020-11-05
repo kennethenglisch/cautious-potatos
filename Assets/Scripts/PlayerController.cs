@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")][SerializeField] float speed = 2f;
 
     [Header("Health and Attack")]
-    [Range(0, 100)][SerializeField] int healthPoints = 100;
+    [Range(0, 100)][SerializeField] int maxHealthPoints = 100;
+    [Range(0, 100)][SerializeField] int currentHealthPoints = 100;
     [Range(1, 50)][SerializeField] int attackPoints = 10;
     [Tooltip("In Seconds")][Range(1.0f, 10f)][SerializeField] float fireRate = 1.5f; // The interval the player is able to fire
 
@@ -32,6 +33,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator = null;
     [SerializeField] SpriteRenderer spriteRenderer = null;
     [SerializeField] GameObject rangedAttackPrefab = null;
+    
+    [SerializeField] PlayerHealthBar healthBar;
+    [SerializeField] PlayerStats stats;
     
     private float horizontalInput;
     private float verticalInput;
@@ -47,6 +51,10 @@ public class PlayerController : MonoBehaviour
         rangedAttackPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/hero-projectile-rounded.prefab", typeof(GameObject));
 
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        
+        healthBar.SetMaxHealth(maxHealthPoints);
+        stats.SetDmg(attackPoints);
+        stats.SetSpeed(speed);
     }
 
     void Update()
@@ -138,7 +146,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsDead()
     {
-        return healthPoints <= 0;
+        return currentHealthPoints <= 0;
     }
 
     private void ProcessDead()
@@ -167,7 +175,8 @@ public class PlayerController : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
-        healthPoints -= damage;
+        currentHealthPoints -= damage;
+        healthBar.SetHealth(currentHealthPoints);
         animator.Play("hero-hit");
     }
 

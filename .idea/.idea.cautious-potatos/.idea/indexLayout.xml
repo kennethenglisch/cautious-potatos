@@ -25,6 +25,7 @@
       <Path>.idea</Path>
       <Path>.vs</Path>
       <Path>Library</Path>
+      <Path>Temp</Path>
       <Path>images</Path>
       <Path>obj</Path>
     </explicitExcludes>

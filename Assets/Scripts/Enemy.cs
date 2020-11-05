@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.UI;
 
 /* Author: Bartholomäus Berresheim
  * Version: 1.0
@@ -12,7 +13,10 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] int attackDamage = 10;
     [SerializeField] int lifePoints = 20;
+    
     [SerializeField] float speed = 1f;
+    
+    [SerializeField] EnemyHealthBar healthBar;
 
     float attackRadius = 0.6f;
     float followRadius = 8f;
@@ -28,6 +32,7 @@ public class Enemy : MonoBehaviour
 
     float Xdif;
     float Ydif;
+    private bool hideHealthBar = false;
 
     void Start()
     {
@@ -39,6 +44,8 @@ public class Enemy : MonoBehaviour
 
         Cooldown = 1;
         TimerForNextAttack = Cooldown;
+        
+        healthBar.SetMaxHealth(lifePoints);
     }
 
     // Update is called once per frame
@@ -56,6 +63,10 @@ public class Enemy : MonoBehaviour
             rb.velocity = UnityEngine.Vector3.zero;
             rb.angularVelocity = 0;
             enemyAnim.Play("Enemy1Death");
+            if(!hideHealthBar){
+            healthBar.Dead();
+            hideHealthBar = true;
+            }
         }
         else if (checkRadius(followRadius))
         {
@@ -101,8 +112,6 @@ public class Enemy : MonoBehaviour
             rb.velocity = UnityEngine.Vector3.zero;
             rb.angularVelocity = 0;
         }
-        //Destroy(GetComponent<PolygonCollider2D>());
-        //gameObject.AddComponent<PolygonCollider2D>();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -122,6 +131,7 @@ public class Enemy : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         lifePoints -= damage;
+        healthBar.SetHealth(lifePoints);
         enemyAnim.Play("Enemy1Hit");
     }
 
