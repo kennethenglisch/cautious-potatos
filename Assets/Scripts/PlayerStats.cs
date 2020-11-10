@@ -5,17 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    private Text stats;
+    [SerializeField] private Text stats;
 
     private float playerSpeed;
 
     private int attackDmg;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        stats = gameObject.GetComponent<Text>();
-    }
 
     // Update is called once per frame
     void SetText()

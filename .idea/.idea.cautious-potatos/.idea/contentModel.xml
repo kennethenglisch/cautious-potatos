@@ -10,6 +10,7 @@
           <e p="CameraMovement.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyHealthBar.cs" t="Include" />
+          <e p="ItemPickup.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
