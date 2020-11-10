@@ -211,4 +211,9 @@ public class PlayerController : MonoBehaviour
         else
             return false;
     }
+
+    public void AddAttackPoints(int addedPoints)
+    {
+        attackPoints += addedPoints;
+    }
 }
