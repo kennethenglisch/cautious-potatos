@@ -638,6 +638,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5142783902616678484, guid: 11d3a01a15ffd6049817a5a04730ed13,
+        type: 3}
+      propertyPath: m_Value
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142783902616678484, guid: 11d3a01a15ffd6049817a5a04730ed13,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5142783902884602829, guid: 11d3a01a15ffd6049817a5a04730ed13,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -652,6 +662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606387213564375620, guid: 11d3a01a15ffd6049817a5a04730ed13,
+        type: 3}
+      propertyPath: lifePoints
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11d3a01a15ffd6049817a5a04730ed13, type: 3}
@@ -735,6 +750,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249156146177230643, guid: 41f0c2366182771429aaee4dd632b888,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6774189901293747641, guid: 41f0c2366182771429aaee4dd632b888,
         type: 3}
