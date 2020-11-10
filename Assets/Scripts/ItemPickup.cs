@@ -15,7 +15,7 @@ public class ItemPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.CompareTag("Player"))
+        if(collider.tag == "Player")
         {
             Debug.Log("item pick up");
             collider.gameObject.SendMessage("AddAttackPoints", addedAttackPoints);
