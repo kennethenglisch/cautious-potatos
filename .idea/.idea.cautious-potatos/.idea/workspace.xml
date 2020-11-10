@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
       </list>
     </option>
   </component>
@@ -71,7 +72,7 @@
       <workItem from="1604394406507" duration="599000" />
       <workItem from="1604426943255" duration="2004000" />
       <workItem from="1604594898106" duration="10523000" />
-      <workItem from="1604999836237" duration="772000" />
+      <workItem from="1604999836237" duration="1085000" />
     </task>
     <servers />
   </component>
