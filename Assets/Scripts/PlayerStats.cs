@@ -11,7 +11,6 @@ public class PlayerStats : MonoBehaviour
 
     private int attackDmg;
 
-    // Update is called once per frame
     void SetText()
     {
         stats.text = ("Dmg: " + attackDmg + "\nSpeed: " + playerSpeed );
