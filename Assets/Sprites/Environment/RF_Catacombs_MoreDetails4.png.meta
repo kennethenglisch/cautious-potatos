@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 5343d6f9d2f1a7d49875faa6b11f4ec9
+guid: 7822c01fe5ba0c44b8bf8eea2a116727
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9018505600396418823
-    second: RF_Catacombs_MoreDetails3_0
+      213: -7653793175840297569
+    second: RF_Catacombs_MoreDetails4_0
   - first:
-      213: -620786971516303830
-    second: RF_Catacombs_MoreDetails3_1
-  - first:
-      213: -9173257352131512531
-    second: RF_Catacombs_MoreDetails3_0
-  - first:
-      213: 4952400036812748584
-    second: RF_Catacombs_MoreDetails3_1
+      213: 8557685369310839467
+    second: RF_Catacombs_MoreDetails4_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -76,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RF_Catacombs_MoreDetails3_0
+      name: RF_Catacombs_MoreDetails4_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 14
-        width: 32
-        height: 32
+        y: 0
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d27f5fc4a0b02b080800000000000000
-      internalID: -9173257352131512531
+      spriteID: f9deab978a348c590800000000000000
+      internalID: -7653793175840297569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RF_Catacombs_MoreDetails3_1
+      name: RF_Catacombs_MoreDetails4_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 14
-        width: 32
-        height: 32
+        x: 36
+        y: 0
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 827fad338957ab440800000000000000
-      internalID: 4952400036812748584
+      spriteID: ba28459b08103c670800000000000000
+      internalID: 8557685369310839467
       vertices: []
       indices: 
       edges: []
