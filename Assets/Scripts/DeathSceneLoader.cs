@@ -16,7 +16,6 @@ public class DeathSceneLoader : MonoBehaviour
 
         private void LoadFirstLevel()
         {
-        
             sceneLoader.SendMessage("PlayerHasDied");
         }
     

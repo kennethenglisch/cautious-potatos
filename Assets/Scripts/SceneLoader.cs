@@ -30,24 +30,27 @@ public class SceneLoader : MonoBehaviour
     public void LoadNextScene()
     {
         count++;
-        Invoke("LoadScene", 0.25f);
+        Invoke("LoadTheScene", 0.25f);
+        
     }
 
-    void LoadScene()
+    void LoadTheScene()
     {
+        print("hello?");
         SceneManager.LoadScene(order[count]);
+        print("hello?");
     }
 
     public void PlayerHasDied()
     {
-        count = 0;
         RandomSceneOrder();
-        Invoke("LoadScene", 0.25f);
+        LoadTheScene();
         print("hmmmm");
     }
 
     void RandomSceneOrder()
     {
+        count = 0;
         order = new int [6];
         for (int i = 2; i < 5; i++)
         {

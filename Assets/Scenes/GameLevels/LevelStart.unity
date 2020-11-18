@@ -171,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 5446334884110903214, guid: b52263e0112a63540a2f085bdae9fe94,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5446334884110903214, guid: b52263e0112a63540a2f085bdae9fe94,
         type: 3}
@@ -244,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 6774189901293747641, guid: 41f0c2366182771429aaee4dd632b888,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6774189901293747641, guid: 41f0c2366182771429aaee4dd632b888,
         type: 3}
@@ -44534,7 +44534,7 @@ PrefabInstance:
     - target: {fileID: 7919794125483333200, guid: 9687150ec4702464f96ccb0177638527,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7919794125483333200, guid: 9687150ec4702464f96ccb0177638527,
         type: 3}
@@ -44690,7 +44690,7 @@ Transform:
   m_LocalScale: {x: 1.0583, y: 1.0583, z: 1.0583}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2046029189
 PolygonCollider2D:
@@ -48433,7 +48433,7 @@ PrefabInstance:
     - target: {fileID: 1946205614172723464, guid: b1e8093c7f3784cda9bfe1a920140e5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1946205614172723464, guid: b1e8093c7f3784cda9bfe1a920140e5c,
         type: 3}
