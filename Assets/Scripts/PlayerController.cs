@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour
 
     private void LoadDeathScreen()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(6);
     }
 
     private void OnTriggerEnter2D(Collider2D col)

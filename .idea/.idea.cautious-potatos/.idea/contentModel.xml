@@ -8,9 +8,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
+          <e p="DeathSceneLoader.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemyHealthBar.cs" t="Include" />
           <e p="ItemPickup.cs" t="Include" />
+          <e p="LevelEndGate.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />

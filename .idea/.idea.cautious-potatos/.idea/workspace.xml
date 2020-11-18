@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelEndGate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -23,9 +24,13 @@
         <option value="$PROJECT_DIR$/Assets/EnemyHealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelEndGate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DeathSceneLoader.cs" />
       </list>
     </option>
   </component>
@@ -74,6 +79,7 @@
       <workItem from="1604594898106" duration="10523000" />
       <workItem from="1604999836237" duration="2301000" />
       <workItem from="1605313204739" duration="708000" />
+      <workItem from="1605727161747" duration="6182000" />
     </task>
     <servers />
   </component>
