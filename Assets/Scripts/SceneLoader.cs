@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    private int count = 0;
+    [SerializeField] private int count = 0;
     [SerializeField] int[] order = new int [6];
     private void Awake()
     {
@@ -29,8 +29,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadNextScene()
     {
-        Invoke("LoadScene", 0.25f);
         count++;
+        Invoke("LoadScene", 0.25f);
     }
 
     void LoadScene()
@@ -42,12 +42,13 @@ public class SceneLoader : MonoBehaviour
     {
         count = 0;
         RandomSceneOrder();
-        LoadScene();
+        Invoke("LoadScene", 0.25f);
+        print("hmmmm");
     }
 
     void RandomSceneOrder()
     {
-        //Invoke("LoadNextLevel", 3f);
+        order = new int [6];
         for (int i = 2; i < 5; i++)
         {
             bool fits = true;

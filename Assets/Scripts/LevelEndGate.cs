@@ -16,8 +16,8 @@ public class LevelEndGate : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         if(!hasLoadedNextScene){
-            sceneLoader.SendMessage("LoadNextScene");
             hasLoadedNextScene = true;
+            sceneLoader.SendMessage("LoadNextScene");
         }
     }
     

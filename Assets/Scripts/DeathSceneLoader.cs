@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class DeathSceneLoader : MonoBehaviour
 {
-        private GameObject sceneLoader;
-
-        private bool hasLoadedNextScene = false;
+        private SceneLoader sceneLoader;
         private void Start()
         {
         
-            sceneLoader = GameObject.FindGameObjectWithTag("SceneLoader");
+            sceneLoader = FindObjectOfType<SceneLoader>();
         
-            if(!hasLoadedNextScene){
-                sceneLoader.SendMessage("PlayerHasDied");
-                hasLoadedNextScene = true;
-            }
+            Invoke("LoadFirstLevel", 3f);
         }
     
 
         private void LoadFirstLevel()
         {
         
-            sceneLoader.SendMessage("PlayerDied");
+            sceneLoader.SendMessage("PlayerHasDied");
         }
     
 }

@@ -10724,12 +10724,12 @@ PrefabInstance:
     - target: {fileID: 919009443528986362, guid: 3321bfb63d952f9488b356310779bf88,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.2
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 919009443528986362, guid: 3321bfb63d952f9488b356310779bf88,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7
+      value: -27.22
       objectReference: {fileID: 0}
     - target: {fileID: 919009443528986362, guid: 3321bfb63d952f9488b356310779bf88,
         type: 3}
@@ -10809,7 +10809,7 @@ GameObject:
   - component: {fileID: 1128471222}
   - component: {fileID: 1128471221}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44621,7 +44621,7 @@ GameObject:
   - component: {fileID: 2046029189}
   - component: {fileID: 2046029190}
   m_Layer: 0
-  m_Name: mainlevbuild_6 (1)
+  m_Name: Dungeon Entry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
