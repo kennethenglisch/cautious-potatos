@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /* Author: Marie Lencer
- * Date: 08.11.2020
+ * Date: 19.11.2020
  * 
- * Version: 1.0
+ * Version: 2.0
  */
 
 public class ItemPickup : MonoBehaviour
