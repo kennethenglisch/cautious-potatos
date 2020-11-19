@@ -8,7 +8,7 @@ using UnityEngine;
  * Version: 1.0
  */
 
-public class ItemPickup : MonoBehaviour
+public class ArmorItemPickup : MonoBehaviour
 {
     [SerializeField] int addedAttackPoints = 10;
 
