@@ -21,27 +21,29 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [Header("General")]
-    [Tooltip("In ms^-1")][SerializeField] float speed = 2f;
+    [Tooltip("In ms^-1")] [SerializeField] float speed = 2f;
 
     [Header("Health and Attack")]
-    [Range(0, 100)][SerializeField] int maxHealthPoints = 100;
-    [Range(0, 100)][SerializeField] int currentHealthPoints = 100;
-    [Range(1, 50)][SerializeField] int attackPoints = 10;
-    [Tooltip("In Seconds")][Range(1.0f, 10f)][SerializeField] float fireRate = 1.5f; // The interval the player is able to fire
+    [Range(0, 100)] [SerializeField] int maxHealthPoints = 100;
+    [Range(0, 100)] [SerializeField] int currentHealthPoints = 100;
+    [SerializeField] int permaHealthPoints = 0;
+    [Range(1, 50)] [SerializeField] int attackPoints = 10;
+    [SerializeField] int permaAttackPoints = 0;
+    [Tooltip("In Seconds")] [Range(1.0f, 10f)] [SerializeField] float fireRate = 1.5f; // The interval the player is able to fire
 
     [Header("Loading Resources")]
     [SerializeField] Animator animator = null;
     [SerializeField] SpriteRenderer spriteRenderer = null;
     [SerializeField] GameObject rangedAttackPrefab = null;
-    
+
     [SerializeField] PlayerHealthBar healthBar;
     [SerializeField] PlayerStats stats;
-    
+
     private float horizontalInput;
     private float verticalInput;
 
     private bool deadScenePlayed = false;
-    
+
     private float nextFire = 0.0f;
 
     void Start()
@@ -51,7 +53,7 @@ public class PlayerController : MonoBehaviour
         rangedAttackPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/hero-projectile-rounded.prefab", typeof(GameObject));
 
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        
+
         healthBar.SetMaxHealth(maxHealthPoints);
         stats.SetDmg(attackPoints);
         stats.SetSpeed(speed);
@@ -64,8 +66,8 @@ public class PlayerController : MonoBehaviour
             ProcessMovement();
             ProcessAttack();
         }
-      
-        if(IsDead() && !deadScenePlayed)
+
+        if (IsDead() && !deadScenePlayed)
         {
             ProcessDead();
         }
@@ -106,27 +108,27 @@ public class PlayerController : MonoBehaviour
             animator.Play("hero-run");
         }
 
-         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0.0f);
+        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0.0f);
 
-         if(!IsAttacking() && !GotHit())
+        if (!IsAttacking() && !GotHit())
             transform.Translate(movement * speed * Time.deltaTime);
     }
-    
+
     private void ProcessAttack()
     {
-            if (Input.GetButton("Fire1") && Time.time > nextFire)
-            {
-                nextFire = Time.time + fireRate;
-                animator.Play("hero-attack1");
-            }
-            else if (Input.GetButton("Fire2") && Time.time > nextFire)
-            {
-                nextFire = Time.time + fireRate;
-                animator.Play("hero-attack2");
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            animator.Play("hero-attack1");
+        }
+        else if (Input.GetButton("Fire2") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            animator.Play("hero-attack2");
 
-                if (rangedAttackPrefab != null)
-                    ProcessRangedAttack();
-            }
+            if (rangedAttackPrefab != null)
+                ProcessRangedAttack();
+        }
     }
 
     private void ProcessRangedAttack()
@@ -134,7 +136,7 @@ public class PlayerController : MonoBehaviour
         float vertical = verticalInput;
         float horizontal = horizontalInput;
 
-        float[] inputs = new float[2] { vertical, horizontal }; 
+        float[] inputs = new float[2] { vertical, horizontal };
 
         GameObject clone;
 
@@ -154,7 +156,7 @@ public class PlayerController : MonoBehaviour
         // play deathscreen
         animator.Play("hero-death");
         Invoke("LoadDeathScreen", 1.5f);
-        
+
     }
 
     private void LoadDeathScreen()
@@ -166,7 +168,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.tag == "Enemy")
         {
-            if (IsAttacking()) { 
+            if (IsAttacking()) {
                 col.gameObject.SendMessage("ApplyDamage", attackPoints);
                 print("fucke you");
             }
@@ -188,9 +190,9 @@ public class PlayerController : MonoBehaviour
     private bool IsIdle()
     {
         if (horizontalInput == 0 && verticalInput == 0
-                                 && !IsPlaying("hero-attack1") && !IsPlaying("hero-attack2") 
-                                 && !IsPlaying("hero-fall")    && !IsPlaying("hero-jump")    
-                                 && !IsPlaying("hero-death")   && !IsPlaying("hero-hit")) 
+                                 && !IsPlaying("hero-attack1") && !IsPlaying("hero-attack2")
+                                 && !IsPlaying("hero-fall") && !IsPlaying("hero-jump")
+                                 && !IsPlaying("hero-death") && !IsPlaying("hero-hit"))
         {
             return true;
         }
@@ -215,5 +217,40 @@ public class PlayerController : MonoBehaviour
     public void AddAttackPoints(int addedPoints)
     {
         attackPoints += addedPoints;
+        Debug.Log("adding " + addedPoints + " attack points");
+    }
+
+    public void AddArmor(int addedPoints)
+    {
+        Debug.Log("adding " + addedPoints + " armor");
+    }
+
+    public void AddHeal(int addedPoints)
+    {
+        currentHealthPoints += addedPoints;
+        Debug.Log("adding " + addedPoints + " health points");
+    }
+
+    public void AddMaxHealth(int addedPoints)
+    {
+        maxHealthPoints += addedPoints;
+        Debug.Log("adding " + addedPoints + " max health points");
+    }
+
+    public void AddPermaHealth(int addedPoints)
+    {
+        permaHealthPoints += addedPoints;
+        Debug.Log("adding " + addedPoints + " perma health points");
+    }
+
+    public void AddPermaAttackPoints(int addedPoints)
+    {
+        permaAttackPoints += addedPoints;
+        Debug.Log("adding " + addedPoints + " perma attack points");
+    }
+
+    public void AddSpeed(int addedPoints)
+    {
+        Debug.Log("adding " + addedPoints + " speed");
     }
 }

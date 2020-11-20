@@ -200,6 +200,14 @@ MonoBehaviour:
   lifePoints: 20
   speed: 1
   healthBar: {fileID: 6706009279709639188}
+  loot:
+  - {fileID: 5007287590798730175, guid: 35e43b17940f842ec9d19d8ff8b5b308, type: 3}
+  - {fileID: 2230348992726885331, guid: 77f04934e676048d786bc405e5f8bb57, type: 3}
+  - {fileID: 4279478822286175986, guid: 350a4702ab48b4d82999c1f415966de4, type: 3}
+  - {fileID: 4547543415280619585, guid: 743f56aec32644ffea8cc74e1f3c2923, type: 3}
+  - {fileID: 1136084739831839259, guid: 49d6c3d3b4b88406b9abbef600acf211, type: 3}
+  - {fileID: 8235017509805467694, guid: fd9e70f87fcf94042a70808763dc55d9, type: 3}
+  - {fileID: 207753752156835445, guid: 9c2355c253f864210818950d3b36791c, type: 3}
 --- !u!61 &3528541196434144342
 BoxCollider2D:
   m_ObjectHideFlags: 0

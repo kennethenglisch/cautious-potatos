@@ -5,8 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /* Author: Bartholomäus Berresheim
- * Version: 1.0
  * Date: 26.10.2020
+ * 
+ * Modified by: Marie Lencer
+ * Date: 20.11.2020
+ * 
+ * Version: 2.0
  */
 
 public class Enemy : MonoBehaviour
@@ -17,6 +21,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float speed = 1f;
     
     [SerializeField] EnemyHealthBar healthBar;
+
+    public GameObject[] loot;
 
     float attackRadius = 0.6f;
     float followRadius = 8f;
@@ -33,6 +39,8 @@ public class Enemy : MonoBehaviour
     float Xdif;
     float Ydif;
     private bool hideHealthBar = false;
+
+    private bool droppedItem = false;
 
     void Start()
     {
@@ -63,6 +71,12 @@ public class Enemy : MonoBehaviour
             rb.velocity = UnityEngine.Vector3.zero;
             rb.angularVelocity = 0;
             enemyAnim.Play("Enemy1Death");
+            if (!droppedItem)
+            {
+                DropItem();
+                droppedItem = true;
+            }
+
             if(!hideHealthBar){
             healthBar.Dead();
             hideHealthBar = true;
@@ -152,5 +166,50 @@ public class Enemy : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    private void DropItem()
+    {
+        int random = Random.Range(0, 100);
+        UnityEngine.Vector3 pos = transform.position;
+        if (random > 94)
+        {
+            Debug.Log("Dropping PermaHealth");
+            Instantiate(loot[4], pos, UnityEngine.Quaternion.identity);
+        }
+        else if (random <= 94 && random > 89)
+        {
+            Debug.Log("Dropping PermaDamage");
+            Instantiate(loot[5], pos, UnityEngine.Quaternion.identity);
+        }
+        else if (random <= 89 && random > 78)
+        {
+            Debug.Log("Dropping Armor");
+            Instantiate(loot[0], pos, UnityEngine.Quaternion.identity);
+        }
+        else if (random <= 78 && random > 66)
+        {
+            Debug.Log("Dropping Damage");
+            Instantiate(loot[1], pos, UnityEngine.Quaternion.identity);
+        }
+        else if (random <= 66 && random > 54)
+        {
+            Debug.Log("Dropping Speed");
+            Instantiate(loot[6], pos, UnityEngine.Quaternion.identity);
+        }
+        else if (random <= 54 && random > 39)
+        {
+            Debug.Log("Dropping Heal");
+            Instantiate(loot[2], pos, UnityEngine.Quaternion.identity);
+        }
+        else if (random <= 39 && random > 24)
+        {
+            Debug.Log("Dropping Health");
+            Instantiate(loot[3], pos, UnityEngine.Quaternion.identity);
+        }
+        else
+        {
+            Debug.Log("Nothing to drop");
+        }
     }
 }
