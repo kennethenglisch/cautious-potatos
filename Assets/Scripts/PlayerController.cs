@@ -217,6 +217,7 @@ public class PlayerController : MonoBehaviour
     public void AddAttackPoints(int addedPoints)
     {
         attackPoints += addedPoints;
+        stats.SetDmg(attackPoints);
         Debug.Log("adding " + addedPoints + " attack points");
     }
 
@@ -228,6 +229,7 @@ public class PlayerController : MonoBehaviour
     public void AddHeal(int addedPoints)
     {
         currentHealthPoints += addedPoints;
+        healthBar.SetHealth(currentHealthPoints);
         Debug.Log("adding " + addedPoints + " health points");
     }
 
@@ -251,6 +253,7 @@ public class PlayerController : MonoBehaviour
 
     public void AddSpeed(int addedPoints)
     {
+        stats.SetSpeed(speed);
         Debug.Log("adding " + addedPoints + " speed");
     }
 }

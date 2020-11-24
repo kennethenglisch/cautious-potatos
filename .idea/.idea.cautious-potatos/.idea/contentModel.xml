@@ -10,6 +10,9 @@
           <e p="CameraMovement.cs" t="Include" />
           <e p="DeathSceneLoader.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="Enemy2.cs" t="Include" />
+          <e p="Enemy3.cs" t="Include" />
+          <e p="Enemy4.cs" t="Include" />
           <e p="EnemyHealthBar.cs" t="Include" />
           <e p="ItemPickup.cs" t="Include" />
           <e p="LevelEndGate.cs" t="Include" />
