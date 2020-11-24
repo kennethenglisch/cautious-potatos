@@ -12,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelEndGate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerArmorBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -26,12 +27,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelEndGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DeathSceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerArmorBar.cs" />
       </list>
     </option>
   </component>
@@ -81,6 +84,7 @@
       <workItem from="1604999836237" duration="2301000" />
       <workItem from="1605313204739" duration="708000" />
       <workItem from="1605727161747" duration="10685000" />
+      <workItem from="1606246460073" duration="1980000" />
     </task>
     <servers />
   </component>

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerHealthBar : MonoBehaviour
 {
 
-	private Image healthbar;
+	[SerializeField] private Image healthbar;
 	private float maxHealth;
 
 	void Start()
@@ -22,6 +22,7 @@ public class PlayerHealthBar : MonoBehaviour
     public void SetHealth(int health)
 	{
 		print("omg u didnt ");
+		print(healthbar);
 		healthbar.fillAmount = health/maxHealth;
 	}
 

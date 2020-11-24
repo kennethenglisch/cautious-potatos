@@ -121,16 +121,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &1273027210 stripped
+--- !u!114 &792043326 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1292131649, guid: 41f0c2366182771429aaee4dd632b888,
+  m_CorrespondingSourceObject: {fileID: 3031511094615546989, guid: 41f0c2366182771429aaee4dd632b888,
     type: 3}
   m_PrefabInstance: {fileID: 7972284247966301786}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: f34f3a872435b9c4585eddb9004ae741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1292131647 stripped
@@ -317,6 +317,11 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 1292131647}
+    - target: {fileID: 6920687971167727116, guid: 3321bfb63d952f9488b356310779bf88,
+        type: 3}
+      propertyPath: armorBar
+      value: 
+      objectReference: {fileID: 792043326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3321bfb63d952f9488b356310779bf88, type: 3}
 --- !u!1001 &2234842065051809542
@@ -758,19 +763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1292131647, guid: 41f0c2366182771429aaee4dd632b888, type: 3}
-      propertyPath: stats
-      value: 
-      objectReference: {fileID: 1273027210}
     - target: {fileID: 3133233366105127146, guid: 41f0c2366182771429aaee4dd632b888,
         type: 3}
       propertyPath: m_Name
       value: PlayerCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5249156146177230643, guid: 41f0c2366182771429aaee4dd632b888,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6774189901293747641, guid: 41f0c2366182771429aaee4dd632b888,
         type: 3}

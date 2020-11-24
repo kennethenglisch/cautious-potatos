@@ -563,6 +563,7 @@ GameObject:
   - component: {fileID: 5249156146063604848}
   - component: {fileID: 5249156146063604862}
   - component: {fileID: 5249156146063604863}
+  - component: {fileID: 334381347}
   m_Layer: 5
   m_Name: Armorbar
   m_TagString: Untagged
@@ -626,6 +627,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &334381347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5249156146063604849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f3a872435b9c4585eddb9004ae741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armorBar: {fileID: 5249156146063604863}
 --- !u!1 &5249156146177230645
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +651,7 @@ GameObject:
   - component: {fileID: 5249156146177230644}
   - component: {fileID: 5249156146177230642}
   - component: {fileID: 5249156146177230643}
-  - component: {fileID: 5249156146177230634}
+  - component: {fileID: 864618430}
   m_Layer: 5
   m_Name: Healthbar
   m_TagString: HealthBar
@@ -701,7 +715,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5249156146177230634
+--- !u!114 &864618430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -713,6 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30753f69b290d64e98640158f268eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthbar: {fileID: 5249156146177230643}
 --- !u!1 &5249156146303504922
 GameObject:
   m_ObjectHideFlags: 0

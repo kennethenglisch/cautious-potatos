@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
     [Range(0, 100)] [SerializeField] int maxHealthPoints = 100;
     [Range(0, 100)] [SerializeField] int currentHealthPoints = 100;
     [SerializeField] int permaHealthPoints = 0;
+    
+    [Range(0, 100)] [SerializeField] int maxArmorPoints = 100;
+    [Range(0, 100)] [SerializeField] int currentArmorPoints = 0;
+    
     [Range(1, 50)] [SerializeField] int attackPoints = 10;
     [SerializeField] int permaAttackPoints = 0;
     [Tooltip("In Seconds")] [Range(1.0f, 10f)] [SerializeField] float fireRate = 1.5f; // The interval the player is able to fire
@@ -37,6 +41,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject rangedAttackPrefab = null;
 
     [SerializeField] PlayerHealthBar healthBar;
+    [SerializeField] PlayerArmorBar armorBar;
     [SerializeField] PlayerStats stats;
 
     private float horizontalInput;
@@ -55,6 +60,11 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         healthBar.SetMaxHealth(maxHealthPoints);
+        healthBar.SetHealth(currentHealthPoints);
+        
+        armorBar.SetMaxArmor(maxArmorPoints);
+        armorBar.SetArmor(currentArmorPoints);
+        
         stats.SetDmg(attackPoints);
         stats.SetSpeed(speed);
     }
@@ -223,6 +233,8 @@ public class PlayerController : MonoBehaviour
 
     public void AddArmor(int addedPoints)
     {
+        currentArmorPoints += addedPoints;
+        armorBar.SetArmor(currentArmorPoints);
         Debug.Log("adding " + addedPoints + " armor");
     }
 
