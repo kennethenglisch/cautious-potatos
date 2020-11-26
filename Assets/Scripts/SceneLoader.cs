@@ -36,16 +36,13 @@ public class SceneLoader : MonoBehaviour
 
     void LoadTheScene()
     {
-        print("hello?");
         SceneManager.LoadScene(order[count]);
-        print("hello?");
     }
 
     public void PlayerHasDied()
     {
         RandomSceneOrder();
         LoadTheScene();
-        print("hmmmm");
     }
 
     void RandomSceneOrder()

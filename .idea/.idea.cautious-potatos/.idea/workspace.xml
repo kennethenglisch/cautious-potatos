@@ -31,10 +31,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelEndGate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DeathSceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerArmorBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StartSoundPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -84,7 +87,8 @@
       <workItem from="1604999836237" duration="2301000" />
       <workItem from="1605313204739" duration="708000" />
       <workItem from="1605727161747" duration="10685000" />
-      <workItem from="1606246460073" duration="1980000" />
+      <workItem from="1606246460073" duration="2546000" />
+      <workItem from="1606397874383" duration="6688000" />
     </task>
     <servers />
   </component>

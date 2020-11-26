@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     [SerializeField] int addedPoints = 10;
-
+   // [SerializeField] AudioSource aS = null;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -53,7 +54,9 @@ public class ItemPickup : MonoBehaviour
                     break;
             }
             //collider.gameObject.SendMessage("AddAttackPoints", addedAttackPoints);
-            Destroy(gameObject);
+            GetComponent<Renderer>().enabled = false;
+            GetComponent<AudioSource>().Play();
+            Destroy(gameObject, 6f);
         }
     }
 }

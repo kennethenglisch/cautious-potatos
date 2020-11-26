@@ -17,6 +17,7 @@
           <e p="ItemPickup.cs" t="Include" />
           <e p="LevelEndGate.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
+          <e p="MusicPlayer.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerArmorBar.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />

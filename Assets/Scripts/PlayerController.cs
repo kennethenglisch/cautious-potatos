@@ -130,6 +130,7 @@ public class PlayerController : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             animator.Play("hero-attack1");
+            GetComponent<AudioSource>().Play();
         }
         else if (Input.GetButton("Fire2") && Time.time > nextFire)
         {
