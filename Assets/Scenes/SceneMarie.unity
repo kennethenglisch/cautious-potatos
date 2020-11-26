@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PermaDamage
       objectReference: {fileID: 0}
+    - target: {fileID: 1136084739831839259, guid: 49d6c3d3b4b88406b9abbef600acf211,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49d6c3d3b4b88406b9abbef600acf211, type: 3}
 --- !u!1001 &58881118
@@ -257,6 +262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PermaHealthItem
       objectReference: {fileID: 0}
+    - target: {fileID: 8235017509805467694, guid: fd9e70f87fcf94042a70808763dc55d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd9e70f87fcf94042a70808763dc55d9, type: 3}
 --- !u!1001 &131521428
@@ -325,6 +335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ArmorItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007287590798730175, guid: 35e43b17940f842ec9d19d8ff8b5b308,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35e43b17940f842ec9d19d8ff8b5b308, type: 3}
@@ -408,6 +423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547543415280619585, guid: 743f56aec32644ffea8cc74e1f3c2923,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8278932532106788357, guid: 743f56aec32644ffea8cc74e1f3c2923,
         type: 3}
@@ -662,6 +682,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DamageItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230348992726885331, guid: 77f04934e676048d786bc405e5f8bb57,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6341100499967516466, guid: 77f04934e676048d786bc405e5f8bb57,
         type: 3}
@@ -1920,6 +1945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2234842063778808570, guid: 5c2e6ad75b270c2479942771bf5023f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c2e6ad75b270c2479942771bf5023f8, type: 3}
 --- !u!1 &1223071178
@@ -2067,6 +2097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpeedItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 207753752156835445, guid: 9c2355c253f864210818950d3b36791c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5757156412251560516, guid: 9c2355c253f864210818950d3b36791c,
         type: 3}
@@ -3127,6 +3162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279478822286175986, guid: 350a4702ab48b4d82999c1f415966de4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4279478822286175990, guid: 350a4702ab48b4d82999c1f415966de4,
         type: 3}
