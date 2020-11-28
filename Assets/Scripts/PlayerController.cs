@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -55,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
 
-        rangedAttackPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/hero-projectile-rounded.prefab", typeof(GameObject));
+       // rangedAttackPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/hero-projectile-rounded.prefab", typeof(GameObject));
 
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
