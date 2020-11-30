@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private int count = 0;
     [SerializeField] int[] order = new int [6];
+    [SerializeField] public GameObject playerCanvas;
     private void Awake()
     {
         int numMusicPlayer = FindObjectsOfType<SceneLoader>().Length;
@@ -36,7 +37,14 @@ public class SceneLoader : MonoBehaviour
 
     void LoadTheScene()
     {
+        if(count == 1)
+        {
+            GameObject player = FindObjectOfType<PlayerController>().gameObject;
+            player.SendMessage("resetStats");
+            playerCanvas.SetActive(true);
+        }
         SceneManager.LoadScene(order[count]);
+
     }
 
     public void PlayerHasDied()

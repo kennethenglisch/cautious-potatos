@@ -7,7 +7,8 @@ public class DeathSceneLoader : MonoBehaviour
         private SceneLoader sceneLoader;
         private void Start()
         {
-        
+            Debug.Log("Start Death Screen");
+            
             sceneLoader = FindObjectOfType<SceneLoader>();
         
             Invoke("LoadFirstLevel", 3f);

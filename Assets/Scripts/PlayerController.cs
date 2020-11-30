@@ -58,18 +58,18 @@ public class PlayerController : MonoBehaviour
 
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
-        healthBar.SetMaxHealth(maxHealthPoints);
-        healthBar.SetHealth(currentHealthPoints);
+        healthBar.SetMaxHealth(maxHealthPoints + permaHealthPoints);
+        healthBar.SetHealth(currentHealthPoints + permaHealthPoints);
         
         armorBar.SetMaxArmor(maxArmorPoints);
         armorBar.SetArmor(currentArmorPoints);
         
-        stats.SetDmg(attackPoints);
+        stats.SetDmg(attackPoints + permaAttackPoints);
         stats.SetSpeed(speed);
     }
 
     void Update()
-    {
+    { 
         if (!IsDead())
         {
             ProcessMovement();
@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
         if (IsDead() && !deadScenePlayed)
         {
             ProcessDead();
+            deadScenePlayed = true;
         }
     }
 
@@ -171,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
     private void LoadDeathScreen()
     {
+        Debug.Log("Loading death screen");
         SceneManager.LoadScene(6);
     }
 
@@ -233,14 +235,28 @@ public class PlayerController : MonoBehaviour
 
     public void AddArmor(int addedPoints)
     {
-        currentArmorPoints += addedPoints;
+        if (currentArmorPoints + addedPoints < maxArmorPoints)
+        {
+            currentArmorPoints += addedPoints;
+        } else
+        {
+            currentArmorPoints = maxArmorPoints;
+        }
+        
         armorBar.SetArmor(currentArmorPoints);
         Debug.Log("adding " + addedPoints + " armor");
     }
 
     public void AddHeal(int addedPoints)
     {
-        currentHealthPoints += addedPoints;
+        if(currentHealthPoints + addedPoints < maxHealthPoints)
+        {
+            currentHealthPoints += addedPoints;
+        } else
+        {
+            currentHealthPoints = maxHealthPoints;
+        }
+        
         healthBar.SetHealth(currentHealthPoints);
         Debug.Log("adding " + addedPoints + " health points");
     }
@@ -248,24 +264,48 @@ public class PlayerController : MonoBehaviour
     public void AddMaxHealth(int addedPoints)
     {
         maxHealthPoints += addedPoints;
+        healthBar.SetMaxHealth(maxHealthPoints);
         Debug.Log("adding " + addedPoints + " max health points");
     }
 
     public void AddPermaHealth(int addedPoints)
     {
         permaHealthPoints += addedPoints;
+        maxHealthPoints += addedPoints;
+        healthBar.SetMaxHealth(maxHealthPoints);
         Debug.Log("adding " + addedPoints + " perma health points");
     }
 
     public void AddPermaAttackPoints(int addedPoints)
     {
         permaAttackPoints += addedPoints;
+        attackPoints += addedPoints;
+        stats.SetDmg(attackPoints);
         Debug.Log("adding " + addedPoints + " perma attack points");
     }
 
     public void AddSpeed(int addedPoints)
     {
+        speed += addedPoints;
         stats.SetSpeed(speed);
         Debug.Log("adding " + addedPoints + " speed");
+    }
+
+    public void resetStats()
+    {
+        currentHealthPoints = 100 + permaHealthPoints;
+        maxHealthPoints = 100 + permaHealthPoints;
+        speed = 2f;
+        attackPoints = 10 + permaAttackPoints;
+        currentArmorPoints = 0;
+
+        healthBar.SetHealth(currentHealthPoints);
+        healthBar.SetMaxHealth(maxHealthPoints);
+        stats.SetSpeed(speed);
+        stats.SetDmg(attackPoints);
+        armorBar.SetArmor(currentArmorPoints);
+        armorBar.SetMaxArmor(maxArmorPoints);
+
+        Debug.Log("reset stats");
     }
 }

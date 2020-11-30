@@ -12,8 +12,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
+    void Start()
+    {
+        Time.timeScale = 0f;
+    }
+
     public void playGame()
     {
+        Time.timeScale = 1f;
         SceneLoader sceneLoader = FindObjectOfType<SceneLoader>();
         sceneLoader.SendMessage("LoadNextScene");
     }
