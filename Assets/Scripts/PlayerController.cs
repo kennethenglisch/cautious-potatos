@@ -293,8 +293,8 @@ public class PlayerController : MonoBehaviour
 
     public void resetStats()
     {
-        currentHealthPoints = 100 + permaHealthPoints;
         maxHealthPoints = 100 + permaHealthPoints;
+        currentHealthPoints = maxHealthPoints;
         speed = 2f;
         attackPoints = 10 + permaAttackPoints;
         currentArmorPoints = 0;
