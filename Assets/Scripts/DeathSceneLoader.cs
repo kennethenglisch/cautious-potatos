@@ -8,8 +8,10 @@ public class DeathSceneLoader : MonoBehaviour
         private void Start()
         {
             Debug.Log("Start Death Screen");
-            
-            sceneLoader = FindObjectOfType<SceneLoader>();
+            GameObject playerCanvas = GameObject.Find("PlayerCanvas");
+            playerCanvas.SetActive(false);
+
+        sceneLoader = FindObjectOfType<SceneLoader>();
         
             Invoke("LoadFirstLevel", 3f);
         }
