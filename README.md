@@ -79,7 +79,7 @@
 * 3 Enemy types and 1 boss
 * Player can die
 * Pause menu with working resume and main menu button
-* Player attacks: Close and Ranged
+* Player attacks: Close (with random crit chance) and Ranged
 * Animated colliders
 * Player and Enemy animations
 * UI: Player: health & armor bars, visible stats (damage and speed). Enemy: health bar
