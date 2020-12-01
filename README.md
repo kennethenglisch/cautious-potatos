@@ -52,6 +52,7 @@
 * [About the Project](#about-the-project)
   * [Basic Idea](#basic-idea)
   * [Features](#features)
+  * [Assets](#assets)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
