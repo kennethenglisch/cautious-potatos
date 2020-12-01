@@ -70,6 +70,27 @@
 * Genre: 2D Rogue-like
 * Story (temp): Death is invading the physical world, and our hero sets out to vanquish him. During his quest, he dies (multiple times) and slowly his goal changes, from saving the world to simply wanting to die (permantly). After Death's defeat, the hero himself takes its place, and the game starts over again, with a new hero at the start.
 
+### Features
+* Player Character
+* Movement Bindings: WASD, arrow-keys and controller
+* Attack Bindings: right and left mouse click
+* 3 Enemy types and 1 boss
+* Player can die
+* Pause menu with working resume and main menu button
+* Player attacks: Close and Ranged
+* Animated colliders
+* Player and Enemy animations
+* UI: Player: health & armor bars, visible stats (damage and speed). Enemy: health bar
+* Main menu with working start and exit button
+* Pause menu
+* Death screen
+* Random item drops: 7 types of items for : health, armor, speed. Permanent and not.
+* 5 different maps: starting village , boss room and 3 dungeons.
+* The order of the 3 dungeons is randomly generated.
+* The dungeons are very large, making it very likely that the player needs multiple runs to reach the exit.
+* Music: Background, attack and item pichup voice lines.
+* Fun gameplay
+
 ### Built With
 
 * [Unity](https://unity.com)
