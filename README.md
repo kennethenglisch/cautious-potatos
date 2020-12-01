@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/kennethenglisch/cautious-potatos">
-    <img src="images/logo.jpeg" alt="Logo" width="200" height="200">
+    <img src="images/logo.jpg" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center"> DnD - Dungeons and Dumbledore</h3>
@@ -51,6 +51,8 @@
 
 * [About the Project](#about-the-project)
   * [Basic Idea](#basic-idea)
+  * [Features](#features)
+  * [Assets](#assets)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -69,6 +71,37 @@
 ### Basic Idea
 * Genre: 2D Rogue-like
 * Story (temp): Death is invading the physical world, and our hero sets out to vanquish him. During his quest, he dies (multiple times) and slowly his goal changes, from saving the world to simply wanting to die (permantly). After Death's defeat, the hero himself takes its place, and the game starts over again, with a new hero at the start.
+
+### Features
+* Player Character
+* Movement Bindings: WASD, arrow-keys and controller
+* Attack Bindings: right and left mouse click
+* 3 Enemy types and 1 boss
+* Player can die
+* Pause menu with working resume and main menu button
+* Player attacks: Close and Ranged
+* Animated colliders
+* Player and Enemy animations
+* UI: Player: health & armor bars, visible stats (damage and speed). Enemy: health bar
+* Main menu with working start and exit button
+* Pause menu
+* Death screen
+* Random item drops: 7 types of items for : health, armor, speed. Permanent and not.
+* 5 different maps: starting village , boss room and 3 dungeons.
+* The order of the 3 dungeons is randomly generated.
+* The dungeons are very large, making it very likely that the player needs multiple runs to reach the exit.
+* Music: Background, attack and item pichup voice lines.
+* Fun gameplay
+
+### Assets
+https://assetstore.unity.com/packages/2d/environments/tiny-rpg-town-environment-88293
+https://assetstore.unity.com/packages/2d/environments/rogue-fantasy-castle-164725
+https://assetstore.unity.com/packages/2d/environments/rogue-fantasy-catacombs-167275
+https://assetstore.unity.com/packages/2d/characters/hero-nad-opponents-animation-140776
+https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811
+https://assetstore.unity.com/packages/2d/gui/icons/2d-pixel-item-asset-pack-99645
+https://assetstore.unity.com/packages/2d/gui/icons/rpg-unitframes-1-powerful-metal-95252
+https://luizmelo.itch.io/wizard-pack
 
 ### Built With
 
