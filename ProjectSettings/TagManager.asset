@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - HealthBar
+  - SceneLoader
+  - Heal
+  - Armor
+  - Health
+  - PermaDamage
+  - PermaHealth
+  - Speed
+  - Damage
   layers:
   - Default
   - TransparentFX
