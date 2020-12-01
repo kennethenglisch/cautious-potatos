@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /* Author: Bartholomäus Berresheim
  * Date: 26.10.2020
@@ -45,6 +46,8 @@ public class Enemy3 : MonoBehaviour
 
     private bool droppedItem = false;
 
+    private bool victoryScreenPlayed = false;
+
     void Start()
     {
         enemyAnim = gameObject.GetComponent<Animator>();
@@ -84,6 +87,12 @@ public class Enemy3 : MonoBehaviour
             {
                 healthBar.Dead();
                 hideHealthBar = true;
+            }
+
+            if (!victoryScreenPlayed)
+            {
+                playVictoryScreen();
+                victoryScreenPlayed = true;
             }
         }
         else if (checkRadius(followRadius))
@@ -173,6 +182,11 @@ public class Enemy3 : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    private void playVictoryScreen()
+    {
+        SceneManager.LoadScene(7);
     }
 
     private void DropItem()

@@ -53,6 +53,12 @@ public class SceneLoader : MonoBehaviour
         LoadTheScene();
     }
 
+    public void PlayerWon()
+    {
+        RandomSceneOrder();
+        LoadTheScene();
+    }
+
     void RandomSceneOrder()
     {
         count = 0;
