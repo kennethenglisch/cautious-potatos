@@ -11,7 +11,7 @@ public class DeathSceneLoader : MonoBehaviour
             GameObject playerCanvas = GameObject.Find("PlayerCanvas");
             playerCanvas.SetActive(false);
 
-        sceneLoader = FindObjectOfType<SceneLoader>();
+            sceneLoader = FindObjectOfType<SceneLoader>();
         
             Invoke("LoadFirstLevel", 3f);
         }
@@ -19,7 +19,7 @@ public class DeathSceneLoader : MonoBehaviour
 
         private void LoadFirstLevel()
         {
-            sceneLoader.SendMessage("PlayerHasDied");
+            sceneLoader.SendMessage("PlayerWon");
         }
     
 }
