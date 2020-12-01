@@ -29,7 +29,7 @@
     <img src="images/logo.jpeg" alt="Logo" width="200" height="200">
   </a>
 
-  <h3 align="center">Cautious Potatos (temporary name)</h3>
+  <h3 align="center"> DnD - Dungeons and Dumbledore</h3>
 
   <p align="center">
     <br />
