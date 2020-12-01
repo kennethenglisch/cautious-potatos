@@ -24,7 +24,6 @@
         <option value="$PROJECT_DIR$/Assets/EnemyHealthBar1.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyHealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealthBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerStats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
@@ -39,6 +38,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
       </list>
     </option>
   </component>
