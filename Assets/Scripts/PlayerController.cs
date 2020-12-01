@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             animator.Play("hero-attack1");
-            GetComponents<AudioSource>()[0].Play();
+            GetComponent<AudioSource>().Play();
         }
         else if (Input.GetButton("Fire2") && Time.time > nextFire)
         {
@@ -166,7 +166,6 @@ public class PlayerController : MonoBehaviour
     {
         // play deathscreen
         animator.Play("hero-death");
-        GetComponents<AudioSource>()[1].Play();
         Invoke("LoadDeathScreen", 1.5f);
 
     }
@@ -285,7 +284,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("adding " + addedPoints + " perma attack points");
     }
 
-    public void AddSpeed(int addedPoints)
+    public void AddSpeed(float addedPoints)
     {
         speed += addedPoints;
         stats.SetSpeed(speed);

@@ -12,6 +12,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     [SerializeField] int addedPoints = 10;
+    [SerializeField] float addedSpeed = 0.1f;
    // [SerializeField] AudioSource aS = null;
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -47,7 +48,7 @@ public class ItemPickup : MonoBehaviour
                     break;
                 case "Speed":
                     Debug.Log("speed item");
-                    collider.gameObject.SendMessage("AddSpeed", addedPoints);
+                    collider.gameObject.SendMessage("AddSpeed", addedSpeed);
                     break;
                 default:
                     Debug.Log("something is wrong");
