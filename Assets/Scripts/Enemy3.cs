@@ -91,8 +91,8 @@ public class Enemy3 : MonoBehaviour
 
             if (!victoryScreenPlayed)
             {
-                playVictoryScreen();
                 victoryScreenPlayed = true;
+                Invoke("playVictoryScreen", 3f);
             }
         }
         else if (checkRadius(followRadius))
