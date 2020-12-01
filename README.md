@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/kennethenglisch/cautious-potatos">
-    <img src="images/logo.jpeg" alt="Logo" width="200" height="200">
+    <img src="images/logo.jpg" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center"> DnD - Dungeons and Dumbledore</h3>
