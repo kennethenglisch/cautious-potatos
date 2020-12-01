@@ -51,6 +51,7 @@
 
 * [About the Project](#about-the-project)
   * [Basic Idea](#basic-idea)
+  * [Features](#features)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -90,6 +91,16 @@
 * The dungeons are very large, making it very likely that the player needs multiple runs to reach the exit.
 * Music: Background, attack and item pichup voice lines.
 * Fun gameplay
+
+### Assets
+https://assetstore.unity.com/packages/2d/environments/tiny-rpg-town-environment-88293
+https://assetstore.unity.com/packages/2d/environments/rogue-fantasy-castle-164725
+https://assetstore.unity.com/packages/2d/environments/rogue-fantasy-catacombs-167275
+https://assetstore.unity.com/packages/2d/characters/hero-nad-opponents-animation-140776
+https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811
+https://assetstore.unity.com/packages/2d/gui/icons/2d-pixel-item-asset-pack-99645
+https://assetstore.unity.com/packages/2d/gui/icons/rpg-unitframes-1-powerful-metal-95252
+https://luizmelo.itch.io/wizard-pack
 
 ### Built With
 
