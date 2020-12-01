@@ -78,7 +78,7 @@
 * Attack Bindings: right and left mouse click
 * 3 Enemy types and 1 boss
 * Player can die
-* Pause menu with working resume and main menu button, accessible with the ESC key
+* Pause menu with working resume and main menu button
 * Player attacks: Close (with random crit chance) and Ranged
 * Animated colliders
 * Player and Enemy animations
@@ -92,6 +92,12 @@
 * The dungeons are very large, making it very likely that the player needs multiple runs to reach the exit.
 * Music: Background, attack and item pichup voice lines.
 * Fun gameplay
+
+### Controlls
+* Movement: WASD keys, Arrow keys
+* Close Attack: left mouse button
+* Range Attack: right mouse button
+* Pause Menu: ESC key
 
 ### Assets
 https://assetstore.unity.com/packages/2d/environments/tiny-rpg-town-environment-88293
