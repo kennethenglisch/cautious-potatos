@@ -78,7 +78,7 @@
 * Attack Bindings: right and left mouse click
 * 3 Enemy types and 1 boss
 * Player can die
-* Pause menu with working resume and main menu button
+* Pause menu with working resume and main menu button, accessible with the ESC key
 * Player attacks: Close (with random crit chance) and Ranged
 * Animated colliders
 * Player and Enemy animations
