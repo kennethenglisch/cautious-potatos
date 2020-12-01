@@ -39,6 +39,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy4.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy3.cs" />
       </list>
     </option>
   </component>
