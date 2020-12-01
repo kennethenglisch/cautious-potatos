@@ -13,6 +13,7 @@ public class Spawn : MonoBehaviour
         player = FindObjectOfType<PlayerController>().gameObject;
         if (!spawned)
         {
+            player.transform.position = new Vector3(0, 0, 0);
             player.transform.position = gameObject.transform.position;
             spawned = true;
         }
