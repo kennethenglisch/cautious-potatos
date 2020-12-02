@@ -105,12 +105,12 @@ public class Enemy3 : MonoBehaviour
             if (Player.x < transform.position.x)
             {
                 transform.eulerAngles = new UnityEngine.Vector3(0, 0, 0);
-                attackRadius = 0.4f;
+                attackRadius = 0.8f;
             }
             else
             {
                 transform.eulerAngles = new UnityEngine.Vector3(0, 180, 0);
-                attackRadius = 0.8f;
+                attackRadius = 1.6f;
             }
 
             if (checkRadius(attackRadius))
