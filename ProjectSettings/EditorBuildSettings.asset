@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 775b3050c9b0b47f693fab527df1f889
   - enabled: 1
+    path: Assets/Scenes/GameLevels/LevelBossStage.unity
+    guid: e405c3cfea0fd3844b3e9d36c0c7362e
+  - enabled: 1
     path: Assets/Scenes/GameLevels/LevelStart.unity
     guid: 4f97c4792ef619744b8722e3c75833ba
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLevels/LevelMarie.unity
     guid: 1555bdbd07ce945e4856638d70a97d07
-  - enabled: 1
-    path: Assets/Scenes/GameLevels/LevelBossStage.unity
-    guid: e405c3cfea0fd3844b3e9d36c0c7362e
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: c20fc1a70dd4f574c8324999aecc5da4
