@@ -14,6 +14,7 @@ TagManager:
   - PermaHealth
   - Speed
   - Damage
+  - MapColliders
   layers:
   - Default
   - TransparentFX

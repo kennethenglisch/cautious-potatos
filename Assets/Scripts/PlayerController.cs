@@ -137,8 +137,11 @@ public class PlayerController : MonoBehaviour
             nextFire = Time.time + fireRate;
             animator.Play("hero-attack2");
 
-            if (rangedAttackPrefab != null)
+            if (rangedAttackPrefab != null){
                 ProcessRangedAttack();
+                GetComponent<AudioSource>().Play();
+                
+            }
         }
     }
 
@@ -298,7 +301,7 @@ public class PlayerController : MonoBehaviour
         speed = 2f;
         attackPoints = 10 + permaAttackPoints;
         currentArmorPoints = 0;
-
+        deadScenePlayed = false;
         healthBar.SetHealth(currentHealthPoints);
         healthBar.SetMaxHealth(maxHealthPoints);
         stats.SetSpeed(speed);

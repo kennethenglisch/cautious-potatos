@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 2750b4c5b3ad38d43b4d095b1c6e9c0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -177,6 +177,18 @@ MonoBehaviour:
   - {fileID: 1136084739831839259, guid: 49d6c3d3b4b88406b9abbef600acf211, type: 3}
   - {fileID: 8235017509805467694, guid: fd9e70f87fcf94042a70808763dc55d9, type: 3}
   - {fileID: 207753752156835445, guid: 9c2355c253f864210818950d3b36791c, type: 3}
+--- !u!114 &2640645356958803258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771451259312995748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42dfce9927686ba419672780e4d129de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &945271285366403762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapCollider_Enemy4
       objectReference: {fileID: 0}
+    - target: {fileID: 2822680951438573631, guid: e987215ce54121d46a924d24eb4bd000,
+        type: 3}
+      propertyPath: m_TagString
+      value: MapCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 9057974039666897941, guid: e987215ce54121d46a924d24eb4bd000,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -393,6 +410,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e987215ce54121d46a924d24eb4bd000, type: 3}
+--- !u!1 &8771451259312995748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2822680951438573631, guid: e987215ce54121d46a924d24eb4bd000,
+    type: 3}
+  m_PrefabInstance: {fileID: 6815733134752152987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2531650027484137870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9057974039666897941, guid: e987215ce54121d46a924d24eb4bd000,

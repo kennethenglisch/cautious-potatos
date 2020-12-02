@@ -21485,6 +21485,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2447557002779751124, guid: 11d3a01a15ffd6049817a5a04730ed13,
+        type: 3}
+      propertyPath: m_TagString
+      value: MapColliders
+      objectReference: {fileID: 0}
     - target: {fileID: 5142783902884602829, guid: 11d3a01a15ffd6049817a5a04730ed13,
         type: 3}
       propertyPath: m_AnchorMax.x

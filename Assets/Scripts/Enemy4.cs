@@ -54,7 +54,7 @@ public class Enemy4 : MonoBehaviour
         enemyAnim.Play("enemy4-idle");
 
         lifePoints = 60;
-        speed = 1.5f;
+        speed = 1.2f;
         Cooldown = 1;
         TimerForNextAttack = Cooldown;
 

@@ -6,9 +6,11 @@
     <e p="S:\Unity Projects\cautious-potatos" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="MapCollider.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
           <e p="DeathSceneLoader.cs" t="Include" />
+          <e p="DontDestroy.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="Enemy2.cs" t="Include" />
           <e p="Enemy3.cs" t="Include" />
@@ -25,10 +27,13 @@
           <e p="PlayerStats.cs" t="Include" />
           <e p="ProjectileController.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
+          <e p="Spawn.cs" t="Include" />
+          <e p="VictoryScreen.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Environment" t="Include">
             <e p="RF_Catacombs_v1.0" t="Include">
+              <e p="public-license 2.txt" t="Include" />
               <e p="public-license.txt" t="Include" />
             </e>
           </e>

@@ -58,6 +58,7 @@ public class Enemy3 : MonoBehaviour
 
         lifePoints = 1000;
         speed = 1.5f;
+        attackDamage = 30;
         
         Cooldown = 1;
         TimerForNextAttack = Cooldown;
