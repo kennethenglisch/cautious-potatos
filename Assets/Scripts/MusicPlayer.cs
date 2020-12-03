@@ -44,7 +44,7 @@ public class MusicPlayer : MonoBehaviour
                 {
                     StopAllAudio(audioSources[0]);
                     audioSources[0].Play();
-                    audioSources[5].volume = 0.1f;
+                    audioSources[5].volume = 0.05f;
                     audioSources[5].Play();
                     Invoke("PlayStartBackgroundMusic", 24.5f);
                     playedStart = true;
@@ -55,7 +55,7 @@ public class MusicPlayer : MonoBehaviour
                 {
                     StopAllAudio(audioSources[1]);
                     audioSources[1].Play();
-                    audioSources[5].volume = 0.1f;
+                    audioSources[5].volume = 0.05f;
                     audioSources[5].Play();
                     Invoke("PlayStartBackgroundMusic", 17.5f);
                     playedStart = true;
