@@ -91,7 +91,7 @@
 * 5 different maps: starting village , boss room and 3 dungeons.
 * The order of the 3 dungeons is randomly generated.
 * The dungeons are very large, making it very likely that the player needs multiple runs to reach the exit.
-* Music: Background, attack and item pichup voice lines.
+* Music: Background, and for the Player: attack, death and item pick-up voice lines.
 * Fun gameplay
 
 ### Controlls
