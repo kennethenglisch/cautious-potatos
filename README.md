@@ -76,7 +76,8 @@
 * Player Character
 * Movement Bindings: WASD, arrow-keys and controller
 * Attack Bindings: right and left mouse click
-* 3 Enemy types and 1 boss
+* 3 Enemy types and 1 boss, with a complex AI : enemies might retreat when on low health or they might have sudden bursts of speed
+* Dead enemies can be moved around just like the ragdoll physics in Dark Souls
 * Player can die
 * Pause menu with working resume and main menu button
 * Player attacks: Close (with random crit chance) and Ranged
