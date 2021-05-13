@@ -131,7 +131,7 @@ _Add installation steps if required_
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-[Documentation](https://example.com)
+[Documentation](https://github.com/kennethenglisch/cautious-potatos)
 
 <!-- ROADMAP -->
 ## Roadmap
