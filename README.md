@@ -115,24 +115,6 @@ https://luizmelo.itch.io/wizard-pack
 * [Unity](https://unity.com)
 Version: 2019.4.12f1
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-
-### Prerequisites
-
-_Add prerequisites if required_
-
-### Installation
-
-_Add installation steps if required_
-
-<!-- USAGE EXAMPLES -->
-## Usage
-[Documentation](https://github.com/kennethenglisch/cautious-potatos)
-
 <!-- ROADMAP -->
 ## Roadmap
 
